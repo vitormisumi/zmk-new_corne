@@ -6,7 +6,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -61,16 +60,25 @@
         };
     };
 
+    macros {
+        symbol_overlay: symbol_overlay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 2 &kp LS(LA(LC(LG(F19))))>;
+            label = "SYMBOL_OVERLAY";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC               &kp Q  &kp W           &kp E        &kp R             &kp T                                                      &kp UP                &kp Y        &kp U              &kp I          &kp O            &kp P          &kp BSPC
-&kp CAPSLOCK          &kp A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                                            &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &mt RIGHT_SHIFT J  &mt RCTRL K    &mt RIGHT_ALT L  &kp RA(N)      &kp ENTER
-&kp NON_US_BACKSLASH  &kp Z  &kp X           &mt LA(C) C  &kp V             &kp B                               &kp SPACE              &kp DOWN              &kp N        &kp M              &kp COMMA      &kp DOT          &kp SEMICOLON  &kp SLASH
-                                             &kp LGUI     &mo 2             &mt LS(LA(LC(LEFT_GUI))) LG(SPACE)                                               &lt 3 SPACE  &mo 1              &kp RIGHT_GUI
+&kp ESC   &kp Q  &kp W           &kp E        &kp R             &kp T                                                      &kp UP                &kp Y        &kp U              &kp I          &kp O            &kp P          &kp BSPC
+&kp TAB   &kp A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                                            &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &mt RIGHT_SHIFT J  &mt RCTRL K    &mt RIGHT_ALT L  &kp RA(C)      &kp RA(N)
+&kp CAPS  &kp Z  &kp X           &kp C        &kp V             &kp B                               &kp SPACE              &kp DOWN              &kp N        &kp M              &kp COMMA      &kp DOT          &kp SEMICOLON  &kp ENTER
+                                 &kp LGUI     &symbol_overlay   &mt LS(LA(LC(LEFT_GUI))) LG(SPACE)                                               &lt 3 SPACE  &mo 1              &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -91,10 +99,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND  &trans  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SINGLE_QUOTE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE      &trans  &trans
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE       &trans  &trans
-                                    &trans     &trans     &kp SPACE                                                             &kp SPACE          &trans                &trans
+&kp GRAVE      &kp EXCL     &kp AT         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT                                      &mmv MOVE_UP                     &trans     &trans  &trans  &trans  &trans  &kp BSPC
+&kp CARET      &kp HASH     &kp DOLLAR     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans     &trans  &trans  &trans  &trans  &trans
+&kp BACKSLASH  &kp PERCENT  &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH          &trans                    &mmv MOVE_DOWN                   &trans     &trans  &trans  &trans  &trans  &trans
+                                           &trans                &trans                 &kp SPACE                                                                     &kp SPACE  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -103,10 +111,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                       &trans       &trans     &trans                                                                   &trans       &trans     &trans
+&kp F1  &kp F2      &kp F3     &kp F4       &kp F5     &kp F6                                  &mmv MOVE_UP                     &kp F7       &kp F8     &kp F9       &kp F10     &kp F11          &kp F12
+&trans  &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &trans
+&trans  &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
+                               &trans       &trans     &trans                                                                   &trans       &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
