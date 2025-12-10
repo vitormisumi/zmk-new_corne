@@ -67,22 +67,22 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC               &kp Q  &kp W  &kp E     &kp R  &kp T                                            &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P          &kp BSPC
-&kp CAPSLOCK          &kp A  &kp S  &kp D     &kp F  &kp G                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp TILDE      &kp ENTER
-&kp NON_US_BACKSLASH  &kp Z  &kp X  &kp C     &kp V  &kp B                     &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp SEMICOLON  &kp SLASH
-                                    &kp LGUI  &mo 2  &mt LEFT_SHIFT LG(SPACE)                                               &lt 3 SPACE  &mo 1  &kp RALT
+&kp ESC               &kp Q  &kp W           &kp E            &kp R             &kp T                                            &kp UP                &kp Y        &kp U              &kp I          &kp O            &kp P          &kp BSPC
+&kp CAPSLOCK          &kp A  &mt LEFT_ALT S  &mt LCTRL D      &mt LEFT_SHIFT F  &kp G                                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &mt RIGHT_SHIFT J  &mt RCTRL K    &mt RIGHT_ALT L  &kp TILDE      &kp ENTER
+&kp NON_US_BACKSLASH  &kp Z  &kp X           &mt LS(LA(C)) C  &kp V             &kp B                     &kp SPACE              &kp DOWN              &kp N        &kp M              &kp COMMA      &kp DOT          &kp SEMICOLON  &kp SLASH
+                                             &kp LGUI         &mo 2             &mt LEFT_SHIFT LG(SPACE)                                               &lt 3 SPACE  &mo 1              &kp RIGHT_GUI
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp MINUS  &kp N7        &kp N8        &kp N9        &kp SLASH     &kp BSPC
+&trans  &trans           &trans          &trans        &trans        &trans                                         &mmv MOVE_UP                     &kp MINUS  &kp N7        &kp N8        &kp N9        &kp SLASH     &kp BSPC
 &trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp ASTERISK  &kp PG_UP
 &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &kp INS    &kp DEL       &trans
+                                         &trans        &trans        &trans                                                                          &trans     &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
