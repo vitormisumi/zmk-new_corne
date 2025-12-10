@@ -68,7 +68,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp ESC               &kp Q  &kp W           &kp E        &kp R             &kp T                                                      &kp UP                &kp Y        &kp U              &kp I          &kp O            &kp P          &kp BSPC
-&kp CAPSLOCK          &kp A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                                            &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &mt RIGHT_SHIFT J  &mt RCTRL K    &mt RIGHT_ALT L  &kp TILDE2     &kp ENTER
+&kp CAPSLOCK          &kp A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                                            &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &mt RIGHT_SHIFT J  &mt RCTRL K    &mt RIGHT_ALT L  &kp RA(N)      &kp ENTER
 &kp NON_US_BACKSLASH  &kp Z  &kp X           &mt LA(C) C  &kp V             &kp B                               &kp SPACE              &kp DOWN              &kp N        &kp M              &kp COMMA      &kp DOT          &kp SEMICOLON  &kp SLASH
                                              &kp LGUI     &mo 2             &mt LS(LA(LC(LEFT_GUI))) LG(SPACE)                                               &lt 3 SPACE  &mo 1              &kp RIGHT_GUI
             >;
@@ -91,10 +91,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp SPACE  &trans     &trans
+&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND  &trans  &kp BSPC
+&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SINGLE_QUOTE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE      &trans  &trans
+&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE       &trans  &trans
+                                    &trans     &trans     &kp SPACE                                                             &kp SPACE          &trans                &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
