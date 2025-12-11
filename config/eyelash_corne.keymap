@@ -60,15 +60,6 @@
         };
     };
 
-    macros {
-        symbol_overlay: symbol_overlay {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LG(F19)))) &mo 2>;
-            label = "SYMBOL_OVERLAY";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -78,7 +69,7 @@
 &kp ESC   &kp Q  &kp W           &kp E        &kp R             &kp T                                                      &kp UP                &kp Y        &kp U              &kp I                &kp O            &kp P          &kp BACKSPACE
 &kp TAB   &kp A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                                            &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &mt RIGHT_SHIFT J  &mt RCTRL K          &mt RIGHT_ALT L  &kp RA(C)      &kp RA(N)
 &kp CAPS  &kp Z  &kp X           &kp C        &kp V             &kp B                               &kp SPACE              &kp DOWN              &kp N        &kp M              &kp COMMA            &kp DOT          &kp SEMICOLON  &kp QUESTION
-                                 &kp LGUI     &symbol_overlay   &mt LS(LA(LC(LEFT_GUI))) LG(SPACE)                                               &lt 3 SPACE  &mo 1              &mt RIGHT_GUI ENTER
+                                 &kp LGUI     &mo 2             &mt LS(LA(LC(LEFT_GUI))) LG(SPACE)                                               &lt 3 SPACE  &mo 1              &mt RIGHT_GUI ENTER
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -88,7 +79,7 @@
             display-name = "NUMBER";
             bindings = <
 &trans  &trans           &trans          &trans        &trans        &trans                                         &mmv MOVE_UP                     &kp MINUS  &kp N7        &kp N8        &kp N9        &kp SLASH     &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp ASTERISK  &kp PG_UP
+&trans  &trans           &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp ASTERISK  &kp PG_UP
 &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &kp PG_DN
                                          &trans        &trans        &trans                                                                          &trans     &trans        &trans
             >;
@@ -99,10 +90,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp GRAVE      &kp EXCL     &kp AT         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT                                      &mmv MOVE_UP                     &trans     &trans  &trans  &trans  &trans  &kp DELETE
-&kp CARET      &kp HASH     &kp DOLLAR     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans     &trans  &trans  &trans  &trans  &trans
-&kp BACKSLASH  &kp PERCENT  &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH          &trans                    &mmv MOVE_DOWN                   &trans     &trans  &trans  &trans  &trans  &trans
-                                           &trans                &trans                 &kp SPACE                                                                     &kp SPACE  &trans  &trans
+&kp GRAVE      &kp EXCL     &kp AT         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT                                      &mmv MOVE_UP                     &kp LS(LA(NUMBER_2))  &kp LA(N9)  &kp LA(N0)  &kp LS(LA(N8))  &trans  &kp DELETE
+&kp CARET      &kp HASH     &kp DOLLAR     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans                &trans      &trans      &trans          &trans  &trans
+&kp BACKSLASH  &kp PERCENT  &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH          &trans                    &mmv MOVE_DOWN                   &trans                &trans      &trans      &trans          &trans  &trans
+                                           &trans                &trans                 &kp SPACE                                                                     &kp SPACE             &trans      &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
