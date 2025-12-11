@@ -75,7 +75,7 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC   &kp Q  &kp W           &kp E        &kp R             &kp T                                                      &kp UP                &kp Y        &kp U              &kp I                &kp O            &kp P          &kp DEL
+&kp ESC   &kp Q  &kp W           &kp E        &kp R             &kp T                                                      &kp UP                &kp Y        &kp U              &kp I                &kp O            &kp P          &kp BACKSPACE
 &kp TAB   &kp A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                                            &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &mt RIGHT_SHIFT J  &mt RCTRL K          &mt RIGHT_ALT L  &kp RA(C)      &kp RA(N)
 &kp CAPS  &kp Z  &kp X           &kp C        &kp V             &kp B                               &kp SPACE              &kp DOWN              &kp N        &kp M              &kp COMMA            &kp DOT          &kp SEMICOLON  &kp QUESTION
                                  &kp LGUI     &symbol_overlay   &mt LS(LA(LC(LEFT_GUI))) LG(SPACE)                                               &lt 3 SPACE  &mo 1              &mt RIGHT_GUI ENTER
@@ -99,7 +99,7 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp GRAVE      &kp EXCL     &kp AT         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT                                      &mmv MOVE_UP                     &trans     &trans  &trans  &trans  &trans  &kp BSPC
+&kp GRAVE      &kp EXCL     &kp AT         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT                                      &mmv MOVE_UP                     &trans     &trans  &trans  &trans  &trans  &kp DELETE
 &kp CARET      &kp HASH     &kp DOLLAR     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans     &trans  &trans  &trans  &trans  &trans
 &kp BACKSLASH  &kp PERCENT  &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH          &trans                    &mmv MOVE_DOWN                   &trans     &trans  &trans  &trans  &trans  &trans
                                            &trans                &trans                 &kp SPACE                                                                     &kp SPACE  &trans  &trans
