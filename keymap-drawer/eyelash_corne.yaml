@@ -42,7 +42,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: ;, s: ':'}
-  - '?'
+  - Alt+E
   - LGUI
   - SYMBOL
   - {t: 'Gui+$$mdi:keyboard-space$$', h: 'Meh+$$mdi:apple-keyboard-command$$'}
@@ -99,9 +99,9 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
-  - {t: '`', s: '~'}
+  - '#'
   - '!'
-  - '@'
+  - '?'
   - (
   - )
   - {t: '''', s: '"'}
@@ -113,7 +113,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
   - ^
-  - '#'
+  - '&'
   - $
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
@@ -128,8 +128,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: \, s: '|'}
+  - '@'
   - '%'
-  - '&'
   - '{'
   - '}'
   - {t: /, s: '?'}
@@ -140,7 +140,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - $$mdi:keyboard-space$$
