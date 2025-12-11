@@ -92,7 +92,7 @@
             bindings = <
 &kp HASH       &kp EXCL       &kp QUESTION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT                                      &mmv MOVE_UP                     &kp LS(LA(NUMBER_2))  &kp LA(N9)  &kp LA(N0)  &kp LS(LA(N8))  &trans  &kp DELETE
 &kp CARET      &kp AMPERSAND  &kp DOLLAR    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans                &trans      &trans      &trans          &trans  &trans
-&kp BACKSLASH  &kp AT_SIGN    &kp PERCENT   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH          &trans                    &mmv MOVE_DOWN                   &trans                &trans      &trans      &trans          &trans  &kp GRAVE
+&kp BACKSLASH  &kp AT_SIGN    &kp PERCENT   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH          &trans                    &mmv MOVE_DOWN                   &trans                &trans      &trans      &trans          &trans  &kp LA(GRAVE)
                                             &trans                &trans                 &kp SPACE                                                                     &kp SPACE             &trans      &trans
             >;
 
