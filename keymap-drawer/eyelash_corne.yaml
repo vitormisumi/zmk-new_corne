@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
   - A
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -111,7 +111,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:backspace-reverse-outline$$
   - ^
   - '#'
   - $
