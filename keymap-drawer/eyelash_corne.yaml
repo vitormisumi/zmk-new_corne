@@ -110,9 +110,9 @@ layers:
   - {t: Alt+9, s: Alt+(}
   - {t: Alt+0, s: Alt+)}
   - {t: Sft+Alt+8, s: Sft+Alt+*}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:backspace-reverse-outline$$
   - ^
+  - $$mdi:backspace-reverse-outline$$
+  - '|'
   - '&'
   - $
   - {t: '[', s: '{'}
@@ -126,7 +126,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Alt+I
   - {t: \, s: '|'}
   - '@'
   - '%'
