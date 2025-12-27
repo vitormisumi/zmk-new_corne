@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
   - A
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -43,7 +43,7 @@ layers:
   - {t: ., s: '>'}
   - {t: ;, s: ':'}
   - Alt+E
-  - {t: '$$mdi:backspace$$', h: LGUI}
+  - {t: 'Alt+$$mdi:backspace$$', h: LGUI}
   - SYMBOL
   - {t: 'Gui+$$mdi:keyboard-space$$', h: 'Meh+$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
@@ -81,7 +81,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB OFF
   - RGB ON
-  - DATA ON SCREEN
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB EFF
   - $$mdi:volume-off$$
