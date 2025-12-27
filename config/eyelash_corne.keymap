@@ -85,10 +85,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC   &kp Q  &kp W            &kp E         &kp R              &kp T                                                      &kp UP                &kp Y        &kp U               &kp I                &kp O             &kp P          &kp BACKSPACE
-&kp TAB   &kp A  &hml LEFT_ALT S  &hml LCTRL D  &hml LEFT_SHIFT F  &kp G                                            &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &hmr RIGHT_SHIFT J  &hmr RCTRL K         &hmr RIGHT_ALT L  &kp RA(C)      &kp RA(N)
-&kp CAPS  &kp Z  &kp X            &kp C         &kp V              &kp B                               &kp SPACE              &kp DOWN              &kp N        &kp M               &kp COMMA            &kp DOT           &kp SEMICOLON  &kp LA(E)
-                                  &kp LGUI      &mo 2              &mt LS(LA(LC(LEFT_GUI))) LG(SPACE)                                               &lt 3 SPACE  &mo 1               &mt RIGHT_GUI ENTER
+&kp ESC   &kp Q  &kp W            &kp E               &kp R              &kp T                                                      &kp UP                &kp Y        &kp U               &kp I                &kp O             &kp P          &kp DELETE
+&kp TAB   &kp A  &hml LEFT_ALT S  &hml LCTRL D        &hml LEFT_SHIFT F  &kp G                                            &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &hmr RIGHT_SHIFT J  &hmr RCTRL K         &hmr RIGHT_ALT L  &kp RA(C)      &kp RA(N)
+&kp CAPS  &kp Z  &kp X            &kp C               &kp V              &kp B                               &kp SPACE              &kp DOWN              &kp N        &kp M               &kp COMMA            &kp DOT           &kp SEMICOLON  &kp LA(E)
+                                  &mt LGUI BACKSPACE  &mo 2              &mt LS(LA(LC(LEFT_GUI))) LG(SPACE)                                               &lt 3 SPACE  &mo 1               &mt RIGHT_GUI ENTER
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -97,10 +97,10 @@
         number_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans           &trans          &trans        &trans        &trans                                         &mmv MOVE_UP                     &kp MINUS  &kp N7        &kp N8        &kp N9        &kp SLASH     &kp BSPC
-&trans  &trans           &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp ASTERISK  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &trans     &trans        &trans
+&trans  &trans           &trans          &trans                &trans        &trans                                         &mmv MOVE_UP                     &kp MINUS  &kp N7        &kp N8        &kp N9        &kp SLASH     &trans
+&trans  &trans           &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp ASTERISK  &kp PG_UP
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &kp C_DATA_ON_SCREEN  &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &kp PG_DN
+                                         &trans                &trans        &trans                                                                          &trans     &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -109,9 +109,9 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp HASH       &kp EXCL       &kp QUESTION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT                                      &mmv MOVE_UP                     &kp LS(LA(NUMBER_2))  &kp LA(N9)  &kp LA(N0)  &kp LS(LA(N8))  &kp CARET  &kp DELETE
-&kp PIPE       &kp AMPERSAND  &kp DOLLAR    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp UNDER             &trans      &trans      &trans          &trans     &kp LA(I)
-&kp BACKSLASH  &kp AT_SIGN    &kp PERCENT   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH          &trans                    &mmv MOVE_DOWN                   &trans                &trans      &trans      &trans          &trans     &kp LA(GRAVE)
+&kp HASH       &kp EXCL       &kp QUESTION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT                                      &mmv MOVE_UP                     &kp LS(LA(NUMBER_2))  &kp LA(N9)  &kp LA(N0)  &kp LS(LA(N8))  &kp CARET  &trans
+&kp PIPE       &kp AMPERSAND  &kp DOLLAR    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp UNDER             &trans      &kp UP      &trans          &trans     &kp LA(I)
+&kp BACKSLASH  &kp AT_SIGN    &kp PERCENT   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH          &trans                    &mmv MOVE_DOWN                   &trans                &kp LEFT    &kp DOWN    &kp RIGHT       &trans     &kp LA(GRAVE)
                                             &trans                &trans                 &kp SPACE                                                                     &kp SPACE             &trans      &trans
             >;
 
